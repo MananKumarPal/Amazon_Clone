@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:amazon_clone/features/address/services/address_services.dart';
 import 'package:flutter/material.dart';
 import 'package:pay/pay.dart';
@@ -81,7 +80,6 @@ class _AddressScreenState extends State<AddressScreen> {
       context: context,
       address: addressToBeUsed,
       totalSum: double.parse(widget.totalAmount),
-      // provide the value for the order parameter,
     );
   }
 

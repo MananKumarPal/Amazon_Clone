@@ -6,7 +6,6 @@ import '../../../common/widgets/custom_button.dart';
 import '../../../constants/global_variables.dart';
 import '../../../models/order.dart';
 import '../../../providers/user_provider.dart';
-
 import '../../admin/services/admin_services.dart';
 import '../../search/screens/search_screen.dart';
 
@@ -230,8 +229,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                     if (user.type == 'admin') {
                       return CustomButton(
                         text: 'Done',
-                        onTap: () {},
-                        //onTap: () => changeOrderStatus(details.currentStep),
+                        onTap: () => changeOrderStatus(details.currentStep),
                       );
                     }
                     return const SizedBox();
@@ -277,6 +275,9 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                           ? StepState.complete
                           : StepState.indexed,
                     ),
+                    Step(
+                        title: const Text('Done'),
+                        content: const Text('Thank you for using Amazon'))
                   ],
                 ),
               ),
@@ -287,5 +288,3 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
     );
   }
 }
-
-//10 00

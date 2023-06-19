@@ -40,12 +40,13 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Amazon Clone',
       theme: ThemeData(
-          scaffoldBackgroundColor: GlobalVariables.backgroundColor,
-          appBarTheme: const AppBarTheme(elevation: 0),
-          iconTheme: const IconThemeData(color: Colors.black),
-          colorScheme:
-              const ColorScheme.light(primary: GlobalVariables.secondaryColor),
-          useMaterial3: true),
+        scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        appBarTheme: const AppBarTheme(elevation: 0),
+        iconTheme: const IconThemeData(color: Colors.black),
+        colorScheme:
+            const ColorScheme.light(primary: GlobalVariables.secondaryColor),
+        // useMaterial3: true
+      ),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
           ? Provider.of<UserProvider>(context).user.type == 'user'
