@@ -58,24 +58,24 @@ class _DealOfDayState extends State<DealOfDay> {
                       height: 235,
                       fit: BoxFit.fitHeight,
                     ),
-                    Container(
-                      padding: const EdgeInsets.only(left: 15),
-                      alignment: Alignment.topLeft,
-                      child: const Text(
-                        '\$100',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                    Container(
-                      alignment: Alignment.topLeft,
-                      padding:
-                          const EdgeInsets.only(left: 15, top: 5, right: 40),
-                      child: const Text(
-                        'Rivaan',
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
+                    // Container(
+                    //   padding: const EdgeInsets.only(left: 15),
+                    //   alignment: Alignment.topLeft,
+                    //   child: const Text(
+                    //     '\$100',
+                    //     style: TextStyle(fontSize: 18),
+                    //   ),
+                    // ),
+                    // Container(
+                    //   alignment: Alignment.topLeft,
+                    //   padding:
+                    //       const EdgeInsets.only(left: 15, top: 5, right: 40),
+                    //   child: const Text(
+                    //     'Created by Manan',
+                    //     maxLines: 2,
+                    //     overflow: TextOverflow.ellipsis,
+                    //   ),
+                    // ),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
