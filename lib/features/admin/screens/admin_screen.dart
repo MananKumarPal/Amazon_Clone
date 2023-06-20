@@ -2,6 +2,7 @@ import 'package:amazon_clone/features/admin/screens/posts_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants/global_variables.dart';
+import '../../account/services/account_services.dart';
 import 'analytics_screen.dart';
 import 'orders_screen.dart';
 
@@ -52,13 +53,21 @@ class _AdminScreenState extends State<AdminScreen> {
                   color: Colors.black,
                 ),
               ),
-              const Text(
-                'Admin',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
+              Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+                const Text(
+                  'Admin',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              )
+                IconButton(
+                    color: Colors.black,
+                    onPressed: () {
+                      AccountServices().logOut(context);
+                    },
+                    icon: const Icon(Icons.logout)),
+              ]),
             ],
           ),
         ),

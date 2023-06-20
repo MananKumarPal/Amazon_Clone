@@ -56,6 +56,9 @@ class _PostsScreenState extends State<PostsScreen> {
                 return Column(
                   children: [
                     SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
                       height: 140,
                       child: SingleProduct(
                         image: productData.images[0],
