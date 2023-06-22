@@ -35,7 +35,12 @@ class _OrdersScreenState extends State<OrdersScreen> {
         : GridView.builder(
             itemCount: orders!.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
+              crossAxisCount: 2,
+              childAspectRatio:
+                  0.7, // Adjust the aspect ratio for desired width-height ratio
+              mainAxisSpacing: 8.0,
+              crossAxisSpacing: 8.0,
+            ),
             itemBuilder: (context, index) {
               final orderData = orders![index];
               return GestureDetector(
@@ -46,10 +51,17 @@ class _OrdersScreenState extends State<OrdersScreen> {
                     arguments: orderData,
                   );
                 },
-                child: SizedBox(
-                  height: 140,
-                  child: SingleProduct(
-                    image: orderData.products[0].images[0],
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.4,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SingleProduct(
+                        image: orderData.products[0].images[0],
+                      ),
+                      const SizedBox(height: 8.0),
+                      Text(orderData.id),
+                    ],
                   ),
                 ),
               );
