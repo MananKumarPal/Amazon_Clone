@@ -1,5 +1,3 @@
-# Amazon_Clone
-Full Stack Amazon Clone with Admin Panel using Flutter, Node, MongoDB 
 # Amazon Clone
 
 Full Stack Amazon Clone along with Admin Panel
