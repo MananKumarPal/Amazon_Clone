@@ -74,7 +74,7 @@ class _PostsScreenState extends State<PostsScreen> {
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,
                             ),
-                            const SizedBox(height: 4),
+                            const SizedBox(height: 6),
                             Text(
                               'Quantity: ${productData.quantity}',
                               style: const TextStyle(
@@ -83,6 +83,12 @@ class _PostsScreenState extends State<PostsScreen> {
                               ),
                             ),
                           ],
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () => deleteProduct(productData, index),
+                        icon: const Icon(
+                          Icons.delete_outline,
                         ),
                       ),
                     ],
