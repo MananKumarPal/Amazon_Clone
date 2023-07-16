@@ -275,9 +275,9 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                           ? StepState.complete
                           : StepState.indexed,
                     ),
-                    Step(
-                        title: const Text('Done'),
-                        content: const Text('Thank you for using Amazon'))
+                    const Step(
+                        title: Text('Done'),
+                        content: Text('Thank you for using Amazon'))
                   ],
                 ),
               ),

@@ -37,7 +37,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio:
-                  0.7, // Adjust the aspect ratio for desired width-height ratio
+                  0.75, // Adjust the aspect ratio for desired width-height ratio
               mainAxisSpacing: 8.0,
               crossAxisSpacing: 8.0,
             ),
@@ -51,13 +51,17 @@ class _OrdersScreenState extends State<OrdersScreen> {
                     arguments: orderData,
                   );
                 },
-                child: Container(
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width * 0.4,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SingleProduct(
-                        image: orderData.products[0].images[0],
+                      Container(
+                        height:
+                            200, // Set the desired height for the SingleProduct widget
+                        child: SingleProduct(
+                          image: orderData.products[0].images[0],
+                        ),
                       ),
                       const SizedBox(height: 8.0),
                       Text(orderData.id),

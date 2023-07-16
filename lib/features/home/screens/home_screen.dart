@@ -1,7 +1,5 @@
 import 'package:amazon_clone/features/search/screens/search_screen.dart';
-import 'package:amazon_clone/providers/user_provider.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import '../../../constants/global_variables.dart';
 import '../widgets/address_box.dart';
@@ -98,9 +96,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
-          children: const [
+          children: [
             AddressBox(),
             SizedBox(height: 10),
             TopCategories(),

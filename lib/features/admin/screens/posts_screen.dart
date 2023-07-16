@@ -53,37 +53,41 @@ class _PostsScreenState extends State<PostsScreen> {
                   crossAxisCount: 2),
               itemBuilder: (context, index) {
                 final productData = products![index];
-                return Column(
-                  children: [
-                    SizedBox(
-                      height: 10,
+                return Column(children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    height: 140,
+                    child: SingleProduct(
+                      image: productData.images[0],
                     ),
-                    SizedBox(
-                      height: 140,
-                      child: SingleProduct(
-                        image: productData.images[0],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          children: [
+                            Text(
+                              productData.name,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Quantity: ${productData.quantity}',
+                              style: const TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Expanded(
-                          child: Text(
-                            productData.name,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 2,
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () => deleteProduct(productData, index),
-                          icon: const Icon(
-                            Icons.delete_outline,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                );
+                    ],
+                  ),
+                ]);
               },
             ),
             floatingActionButton: FloatingActionButton(
